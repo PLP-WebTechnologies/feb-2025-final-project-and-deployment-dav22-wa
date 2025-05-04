@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StyleHut - Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100">
+  <header class="bg-gray-900 text-white py-4 sticky top-0 z-10 shadow-lg">
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <h1 class="text-2xl font-bold">StyleHut</h1>
+      <nav>
+        <ul class="flex space-x-6">
+          <li><a href="index.html" class="hover:text-indigo-400 transition">Home</a></li>
+          <li><a href="products.html" class="hover:text-indigo-400 transition">Products</a></li>
+          <li><a href="cart.html" class="hover:text-indigo-400 transition relative">
+            Cart <span id="cart-counter" class="absolute -top-2 -right-4 bg-red-500 text-white text-xs rounded-full px-2">0</span>
+          </a></li>
+          <li><a href="contact.html" class="hover:text-indigo-400 transition">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero bg-cover bg-center h-96 flex items-center justify-center text-white" style="background-image: url('https://images.unsplash.com/photo-1445205170230-053b83016050?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80')">
+      <div class="text-center bg-black bg-opacity-50 p-6 rounded">
+        <h2 class="text-4xl font-bold mb-2">Welcome to StyleHut</h2>
+        <p class="text-lg">Your one-stop fashion shop!</p>
+      </div>
+    </section>
+    <section class="featured container mx-auto py-8">
+      <h3 class="text-2xl font-semibold text-center mb-6">Featured Products</h3>
+      <div class="product-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="product bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition">
+          <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Classic Shirt" class="w-full h-48 object-cover rounded">
+          <p class="mt-2 text-center font-medium">Classic Shirt - $20</p>
+          <button onclick="addToCart('Classic Shirt', 20)" class="mt-2 w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700 transition">Add to Cart</button>
+        </div>
+        <div class="product bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition">
+          <img src="https://images.unsplash.com/photo-1591195853828-11db59a44f6b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Elegant Dress" class="w-full h-48 object-cover rounded">
+          <p class="mt-2 text-center font-medium">Elegant Dress - $35</p>
+          <button onclick="addToCart('Elegant Dress', 35)" class="mt-2 w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700 transition">Add to Cart</button>
+        </div>
+        <div class="product bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition">
+          <img src="https://images.unsplash.com/photo-1608063615781-e2dce903d41c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Sneakers" class="w-full h-48 object-cover rounded">
+          <p class="mt-2 text-center font-medium">White Sneakers - $45</p>
+          <button onclick="addToCart('White Sneakers', 45)" class="mt-2 w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700 transition">Add to Cart</button>
+        </div>
+        <div class="product bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition">
+          <img src="https://images.unsplash.com/photo-1611312443401-0c6b2d6b04f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Sunglasses" class="w-full h-48 object-cover rounded">
+          <p class="mt-2 text-center font-medium">Retro Sunglasses - $25</p>
+          <button onclick="addToCart('Retro Sunglasses', 25)" class="mt-2 w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700 transition">Add to Cart</button>
+        </div>
+        <div class="product bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition">
+          <img src="https://images.unsplash.com/photo-1571945153237-4979a6476860?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Handbag" class="w-full h-48 object-cover rounded">
+          <p class="mt-2 text-center font-medium">Leather Handbag - $60</p>
+          <button onclick="addToCart('Leather Handbag', 60)" class="mt-2 w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700 transition">Add to Cart</button>
+        </div>
+        <div class="product bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition">
+          <img src="https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Watch" class="w-full h-48 object-cover rounded">
+          <p class="mt-2 text-center font-medium">Classic Watch - $80</p>
+          <button onclick="addToCart('Classic Watch', 80)" class="mt-2 w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700 transition">Add to Cart</button>
+        </div>
+        <div class="product bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Blazer" class="w-full h-48 object-cover rounded">
+          <p class="mt-2 text-center font-medium">Tailored Blazer - $55</p>
+          <button onclick="addToCart('Tailored Blazer', 55)" class="mt-2 w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700 transition">Add to Cart</button>
+        </div>
+        <div class="product bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition">
+          <img src="https://images.unsplash.com/photo-1598033129183-c4f50c736f10?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Scarf" class="w-full h-48 object-cover rounded">
+          <p class="mt-2 text-center font-medium">Silk Scarf - $15</p>
+          <button onclick="addToCart('Silk Scarf', 15)" class="mt-2 w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700 transition">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="bg-gray-900 text-white py-4 text-center">
+    <p>© 2025 StyleHut. All rights reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StyleHut - Products</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100">
+  <header class="bg-gray-900 text-white py-4 sticky top-0 z-10 shadow-lg">
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <h1 class="text-2xl font-bold">StyleHut</h1>
+      <nav>
+        <ul class="flex space-x-6">
+          <li><a href="index.html" class="hover:text-indigo-400 transition">Home</a></li>
+          <li><a href="products.html" class="hover:text-indigo-400 transition">Products</a></li>
+          <li><a href="cart.html" class="hover:text-indigo-400 transition relative">
+            Cart <span id="cart-counter" class="absolute -top-2 -right-4 bg-red-500 text-white text-xs rounded-full px-2">0</span>
+          </a></li>
+          <li><a href="contact.html" class="hover:text-indigo-400 transition">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="container mx-auto py-8">
+    <h2 class="text-2xl font-semibold text-center mb-6">All Products</h2>
+    <div class="product-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="product bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition">
+        <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Denim Jeans" class="w-full h-48 object-cover rounded">
+        <p class="mt-2 text-center font-medium">Denim Jeans - $30</p>
+        <button onclick="addToCart('Denim Jeans', 30)" class="mt-2 w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700 transition">Add to Cart</button>
+      </div>
+      <div class="product bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition">
+        <img src="https://images.unsplash.com/photo-1590402494587-44b71d7779f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Leather Jacket" class="w-full h-48 object-cover rounded">
+        <p class="mt-2 text-center font-medium">Leather Jacket - $50</p>
+        <button onclick="addToCart('Leather Jacket', 50)" class="mt-2 w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700 transition">Add to Cart</button>
+      </div>
+      <div class="product bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition">
+        <img src="https://images.unsplash.com/photo-1602293589930-45aad59ba823?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Sweater" class="w-full h-48 object-cover rounded">
+        <p class="mt-2 text-center font-medium">Cozy Sweater - $40</p>
+        <button onclick="addToCart('Cozy Sweater', 40)" class="mt-2 w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700 transition">Add to Cart</button>
+      </div>
+      <div class="product bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition">
+        <img src="https://images.unsplash.com/photo-1611312443418-9bded1f0e87e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Hat" class="w-full h-48 object-cover rounded">
+        <p class="mt-2 text-center font-medium">Wool Hat - $18</p>
+        <button onclick="addToCart('Wool Hat', 18)" class="mt-2 w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700 transition">Add to Cart</button>
+      </div>
+      <div class="product bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition">
+        <img src="https://images.unsplash.com/photo-1593795899761-4a4639c2fd6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Boots" class="w-full h-48 object-cover rounded">
+        <p class="mt-2 text-center font-medium">Ankle Boots - $65</p>
+        <button onclick="addToCart('Ankle Boots', 65)" class="mt-2 w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700 transition">Add to Cart</button>
+      </div>
+      <div class="product bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition">
+        <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd18f8f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Necklace" class="w-full h-48 object-cover rounded">
+        <p class="mt-2 text-center font-medium">Gold Necklace - $30</p>
+        <button onclick="addToCart('Gold Necklace', 30)" class="mt-2 w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700 transition">Add to Cart</button>
+      </div>
+      <div class="product bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition">
+        <img src="https://images.unsplash.com/photo-1606760227091-3dd44d7e6726?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="T-Shirt" class="w-full h-48 object-cover rounded">
+        <p class="mt-2 text-center font-medium">Graphic T-Shirt - $22</p>
+        <button onclick="addToCart('Graphic T-Shirt', 22)" class="mt-2 w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700 transition">Add to Cart</button>
+      </div>
+      <div class="product bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition">
+        <img src="https://images.unsplash.com/photo-1593795899630-b603e4e5e970?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Belt" class="w-full h-48 object-cover rounded">
+        <p class="mt-2 text-center font-medium">Leather Belt - $20</p>
+        <button onclick="addToCart('Leather Belt', 20)" class="mt-2 w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700 transition">Add to Cart</button>
+      </div>
+      <div class="product bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition">
+        <img src="https://images.unsplash.com/photo-1607349913338-fca6bd12348a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Skirt" class="w-full h-48 object-cover rounded">
+        <p class="mt-2 text-center font-medium">Pleated Skirt - $28</p>
+        <button onclick="addToCart('Pleated Skirt', 28)" class="mt-2 w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700 transition">Add to Cart</button>
+      </div>
+      <div class="product bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition">
+        <img src="https://images.unsplash.com/photo-1590402494682-44b6f6a19b8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Earrings" class="w-full h-48 object-cover rounded">
+        <p class="mt-2 text-center font-medium">Hoop Earrings - $15</p>
+        <button onclick="addToCart('Hoop Earrings', 15)" class="mt-2 w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700 transition">Add to Cart</button>
+      </div>
+      <div class="product bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition">
+        <img src="https://images.unsplash.com/photo-1605733513597-a8f834bd2f2f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Coat" class="w-full h-48 object-cover rounded">
+        <p class="mt-2 text-center font-medium">Wool Coat - $75</p>
+        <button onclick="addToCart('Wool Coat', 75)" class="mt-2 w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700 transition">Add to Cart</button>
+      </div>
+      <div class="product bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition">
+        <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Wallet" class="w-full h-48 object-cover rounded">
+        <p class="mt-2 text-center font-medium">Leather Wallet - $35</p>
+        <button onclick="addToCart('Leather Wallet', 35)" class="mt-2 w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700 transition">Add to Cart</button>
+      </div>
+    </div>
+  </main>
+  <footer class="bg-gray-900 text-white py-4 text-center">
+    <p>© 2025 StyleHut. All rights reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
